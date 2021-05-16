@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="{% static 'GogolApp/styles.css' %}">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      <link rel='icon' href="{% static 'GogolApp/favicon.ico' %}" type='image/x-icon/' >
+      <title>Advanced Gogol</title>
+   </head>
+
+<body id="advBody">
+   <div id="header">
+      <div id="links-line_left"></div>
+      <div id="links">
+         <a style="text-align: center;" href="{% url 'index' %}">Gogol</a>
+         <a href="{% url 'imageSearch' %}">Images</a>
+      </div>
+   </div>
+   <div id="appbar">
+      <label>
+         Advanced Search
+      </label>
+   </div>
+   <div class="border"></div>
+   <div id="formWrap">
+      <form action="https://www.google.com/search" method="get">
+         <div class="advSect0">
+            <div id="advHead">
+               <span>Find pages with...</span>
+            </div>
+            <div class="spacer">
+               &nbsp;
+            </div>
+            <div class="advExample" style="padding-bottom: 5px;">
+               <p>To do this in the search box</p>
+            </div>
+         </div>
+         <div class="advSect1">
+            <div class="row">
+               <div class="advTitle">
+                  <label>
+                     all these words:
+                  </label>
+               </div>
+               <div class="inputBounds">
+                  <div class="inputField" style="padding-right: 16px;">
+                     <input class="textInput" type="text" name="as_q">
+                  </div>
+               </div>
+               <div class="advExamples">
+                  Type the important words:<span> tricolor rat terrier</span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="advTitle">
+                  <label>
+                     this exact word or phrase:
+                  </label>
+               </div>
+               <div class="inputBounds">
+                  <div class="inputField" style="padding-right: 16px;">
+                     <input class="textInput" type="text" name="as_epq">
+                  </div>
+               </div>
+               <div class="advExamples">
+                  Put exact words in quotes:<span> "rat terrier"</span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="advTitle">
+                  <label>
+                     any of these words:
+                  </label>
+               </div>
+               <div class="inputBounds">
+                  <div class="inputField" style="padding-right: 16px;">
+                     <input class="textInput" type="text" name="as_oq">
+                  </div>
+               </div>
+               <div class="advExamples">
+                  Type OR between all the words you want:<span> miniature OR standard</span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="advTitle">
+                  <label>
+                     none of these words:
+                  </label>
+               </div>
+               <div class="inputBounds">
+                  <div class="inputField" style="padding-right: 16px;">
+                     <input class="textInput" type="text" name="as_eq">
+                  </div>
+               </div>
+               <div class="advExamples">
+                  Put a minus sign just before words you don't want:<span> -rodent, -"Jack Russell"</span>
+               </div>
+            </div>
+         </div>
+         <div class="advSect1" id="sbmtFoot">
+            <div id="col1">
+               &nbsp;
+            </div>
+            <div class="spacer">
+               <input class="button" style="line-height:100%;height:30px;min-width:120px" value="Advanced Search"
+                  type="submit">
+            </div>
+         </div>
+      </form>
+   </div>
+   <div class="border" style="margin-bottom: 18px;margin-top: 18px;"></div>
+
+</body>
